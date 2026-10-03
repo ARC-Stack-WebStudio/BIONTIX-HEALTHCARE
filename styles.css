@@ -93,11 +93,15 @@ textarea {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--blue);
+    /* color: var(--blue); */
     font-size: .72rem;
     letter-spacing: .15em;
     text-transform: uppercase;
     font-weight: 600
+}
+
+.section-intro h2{
+   font-size: 40px;
 }
 
 .eyebrow:before {
