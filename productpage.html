@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071d3b">
+  <meta name="description" content="Explore BIONTIX Healthcare product information and request a product quote.">
+  <title>BIONTIX Healthcare | Product Information</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-detail { padding-top: 145px; }
+    .product-breadcrumb { color: var(--muted, #65777b); margin-bottom: 28px; font-size: .9rem; }
+    .product-breadcrumb a { color: var(--teal); }
+    .product-image-wrap { background: var(--teal-light); border-radius: 16px; min-height: 320px; display:flex; align-items:center; justify-content:center; padding:24px; }
+    .product-image-wrap img { width:100%; max-height:520px; object-fit:contain; border-radius:12px; }
+    .product-copy h1 { color:var(--navy); margin:0 0 14px; }
+    .product-copy .lead { color:var(--teal); font-size:1.08rem; }
+    .product-copy h2,.product-inquiry h2 { color:var(--navy); font-size:1.25rem; margin:24px 0 10px; }
+    .product-cta { background:var(--teal-light); border-left:4px solid var(--gold); border-radius:10px; padding:18px; margin-top:24px; }
+    .product-cta p { margin-bottom:12px; }
+    .product-inquiry { margin-top:54px; padding:28px; border:1px solid rgba(33,78,86,.15); border-radius:16px; box-shadow:0 12px 35px rgba(25,54,60,.07); }
+    .product-inquiry .contact-form { box-shadow:none; padding:0; }
+    .product-inquiry .contact-form textarea { min-height:100px; }
+    .product-not-found { min-height:55vh; display:grid; place-content:center; text-align:center; padding-top:110px; }
+    @media(max-width:767px) { .product-detail { padding-top:115px; } .product-image-wrap { min-height:240px; } .product-inquiry { padding:20px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="BIONTIX home"><span class="brand-mark" aria-hidden="true"><span><img src="./assest/Biontix Healthcare Logo.jpeg" alt=""></span></span><span>BIONTIX HEALTHCARE<small>Nurturing Life Throungh Technology</small></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li><li class="nav-item"><a class="nav-link active" href="product.html">Products</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul><a class="btn btn-primary ms-lg-4" href="contact.html">Request Consultation <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="section-pad product-detail">
+      <div class="container" id="productContent">
+        <nav class="product-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="product.html">Products</a> / <span id="breadcrumbName">Product</span></nav>
+        <div class="row align-items-start g-4 g-lg-5">
+          <div class="col-lg-6 col-md-6 col-sm-12"><div class="product-image-wrap"><img id="productImage" class="img-fluid" src="" alt=""></div></div>
+          <div class="col-lg-6 col-md-6 col-sm-12 product-copy">
+            <span class="eyebrow">BIONTIX Healthcare Products</span><h1 id="productName"></h1><p class="lead" id="shortDescription"></p>
+            <h2>Product Overview</h2><p id="description"></p>
+            <div id="featuresSection" hidden><h2>Key Features</h2><ul id="featuresList"></ul></div>
+            <div id="applicationsSection" hidden><h2>Applications</h2><ul id="applicationsList"></ul></div>
+            <aside class="product-cta"><strong>Need more information?</strong><p>Talk to our team about this product.</p><a class="btn btn-navy" href="contact.html">Contact Us <span aria-hidden="true">→</span></a> <a class="text-link" href="tel:+919005392993">Call 90053 92993</a></aside>
+          </div>
+        </div>
+        <section class="product-inquiry" aria-labelledby="inquiryTitle">
+          <h2 id="inquiryTitle">Request a Quote</h2><p>Send our team an enquiry about <strong id="selectedProduct"></strong>.</p>
+          <form class="contact-form" id="productInquiryForm" novalidate>
+            <input type="hidden" id="inquiryProduct" name="product">
+            <div class="field"><label for="inquiryName">Name *</label><input id="inquiryName" name="name" autocomplete="name" required minlength="2" placeholder="Your name"></div>
+            <div class="field"><label for="inquiryEmail">Email *</label><input id="inquiryEmail" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
+            <div class="field"><label for="inquiryPhone">Phone *</label><input id="inquiryPhone" name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"></div>
+            <div class="field"><label for="inquiryCompany">Company</label><input id="inquiryCompany" name="company" autocomplete="organization" placeholder="Company or hospital"></div>
+            <div class="field full"><label for="inquiryMessage">Message *</label><textarea id="inquiryMessage" name="message" required minlength="10" placeholder="Tell us how we can help"></textarea></div>
+            <p class="form-status full" id="inquiryStatus" aria-live="polite"></p>
+            <div class="field full"><button class="btn btn-primary" type="submit">Send Inquiry <span aria-hidden="true">↗</span></button><small>This frontend form does not send data to a server yet.</small></div>
+          </form>
+        </section>
+      </div>
+      <div class="container product-not-found" id="notFound" hidden><div><span class="eyebrow">Product information</span><h1>Product Not Found</h1><p>The product ID may be missing or invalid.</p><a class="btn btn-primary" href="product.html">Back to Products</a></div></div>
+    </section>
+  </main>
+  <footer><div class="container"><div class="footer-top">
+    <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span><img src="./assest/Biontix Healthcare Logo.jpeg" alt=""></span></span><span>BIONTIX<small>HEALTHCARE INFRASTRUCTURE</small></span></a><p>Advanced modular operating theatres and healthcare infrastructure, engineered around the demands of clinical care.</p></div>
+    <div class="footer-col"><h3>Explore</h3><a href="aboutus.html">About us</a><a href="product.html">Products &amp; systems</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h3>Contact</h3><span><a href="tel:+919005392993">90053 92993</a></span><span><a href="tel:+919892646751">98926 46751</a></span><span><a href="mailto:biontixhealthcare@gmail.com">biontixhealthcare@gmail.com</a></span></div>
+  </div><div class="footer-bottom"><span>© <span id="year">2026</span> BIONTIX Healthcare.</span><span>Designed for better healthcare environments.</span></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>
