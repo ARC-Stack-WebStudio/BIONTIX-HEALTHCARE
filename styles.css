@@ -1408,6 +1408,88 @@ footer {
     font-size: .61rem
 }
 
+.social-hover-widget {
+    position: fixed;
+    z-index: 1100;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 8px 0 8px 8px;
+    border-radius: 16px 0 0 16px;
+    background: var(--navy);
+    box-shadow: var(--shadow);
+}
+
+.social-hover-toggle {
+    width: 34px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 12px 0 0 12px;
+    color: var(--gold-light);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.social-hover-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translateX(12px);
+    transition: max-width .28s ease, opacity .2s ease, transform .28s ease, visibility 0s linear .28s;
+}
+
+.social-hover-panel .social-hover-link:nth-child(1) { transform: translateX(-2px); }
+.social-hover-panel .social-hover-link:nth-child(3) { transform: translateX(-2px); }
+
+.social-hover-widget:hover .social-hover-panel,
+.social-hover-widget:focus-within .social-hover-panel,
+.social-hover-widget.is-open .social-hover-panel {
+    max-width: 52px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition-delay: 0s;
+}
+
+.social-hover-link {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid #ffffff35;
+    border-radius: 13px;
+    color: #fff;
+    background: var(--navy-2);
+    transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.social-hover-link:hover {
+    color: var(--navy);
+    background: var(--gold-light);
+    transform: translateX(-2px);
+}
+
+.social-hover-link svg { width: 20px; height: 20px; fill: currentColor; }
+.social-hover-link[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+
+@media (max-width: 767.98px) {
+    .social-hover-widget { top: auto; bottom: 24%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-hover-panel, .social-hover-link { transition: none; }
+}
+
 .demo-badge {
     position: fixed;
     right: 16px;
