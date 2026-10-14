@@ -5,8 +5,8 @@
   const socialUrls = {
     linkedin: '',
     instagram: 'https://www.instagram.com/iam_ashhkhan/',
-    whatsapp: '',
-    call: 'tel:+919005392993'
+    whatsapp: 'https://wa.me/919369714449',
+    call: 'tel:+919369714449'
   };
 
   if (document.querySelector('.social-hover-widget')) return;
