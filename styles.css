@@ -186,8 +186,8 @@ p {
 /* Navigation */
 .navbar {
     height: 82px;
-    background: rgba(255, 255, 255, .96);
-    /* background: #D8D8DA; */
+    /* background: rgba(255, 255, 255, .96); */
+    background: #FFFFFF;
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(14px);
     transition: box-shadow .25s
@@ -222,6 +222,15 @@ p {
 
 .brand-mark img{
     border-radius: 10px;
+    width: 100px;
+}
+
+.BH-Slogun-name{
+    color: var(--navy-2);
+}
+
+.BH-Slogun-name img{
+    width: 200px;
 }
 
 .brand-mark:before,
