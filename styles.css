@@ -466,7 +466,12 @@ p {
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: var(--radius)
+    border-radius: var(--radius);
+    height: 650px;
+}
+
+.about-copy h2{
+    font-size: 40px;
 }
 
 .about-visual:after {
