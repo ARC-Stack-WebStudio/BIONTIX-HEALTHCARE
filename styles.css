@@ -131,7 +131,7 @@ p {
 }
 
 .section-pad {
-    padding: 108px 0
+    padding: 85px 0
 }
 
 .section-intro {
@@ -467,11 +467,11 @@ p {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: var(--radius);
-    height: 650px;
+    height: 360px;
 }
 
 .about-copy h2{
-    font-size: 40px;
+    font-size: 34px;
 }
 
 .about-visual:after {
@@ -509,7 +509,7 @@ p {
 }
 
 .about-copy p {
-    margin: 18px 0
+    margin: 11px 0
 }
 
 .about-points {
@@ -1481,7 +1481,7 @@ footer {
     }
 
     .section-pad {
-        padding: 82px 0
+        padding: 72px 0
     }
 
     .about-layout,

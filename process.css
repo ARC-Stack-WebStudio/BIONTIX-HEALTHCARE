@@ -40,6 +40,7 @@
     font-size: clamp(2.75rem, 5.15vw, 4.65rem);
     line-height: 1.12;
     letter-spacing: -.055em;
+    font-size:40px;
 }
 
 .process-hero h1 span {
