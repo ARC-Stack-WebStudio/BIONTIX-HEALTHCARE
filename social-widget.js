@@ -67,15 +67,7 @@
   };
 
   toggle.addEventListener('click', () => {
-    const mouseHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    setOpen(mouseHover || !widget.classList.contains('is-open'));
-  });
-  widget.addEventListener('pointerenter', event => {
-    if (event.pointerType === 'mouse') setOpen(true);
-  });
-  widget.addEventListener('focusin', () => setOpen(true));
-  widget.addEventListener('pointerleave', event => {
-    if (event.pointerType === 'mouse') setOpen(false);
+    setOpen(!widget.classList.contains('is-open'));
   });
   widget.addEventListener('keydown', event => {
     if (event.key === 'Escape') {

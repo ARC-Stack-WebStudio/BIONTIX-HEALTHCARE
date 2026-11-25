@@ -701,6 +701,10 @@
     .process-cta .btn {
         margin-top: 4px;
     }
+
+    .js-motion .reveal.is-visible {
+        padding: 10px;
+    }
 }
 
 @media (max-width:575.98px) {
@@ -787,4 +791,23 @@
     .process-text-link {
         transition: none;
     }
+}
+/* Narrow-screen layout refinements */
+@media (max-width: 767.98px) {
+  .process-hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .journey-list, .advantage-grid, .process-cta .row { min-width: 0; }
+  .journey-copy, .advantage-item, .eco-node-copy { min-width: 0; overflow-wrap: anywhere; }
+  .process-hero-visual img, .future-visual img { max-width: 100%; height: auto; }
+  .process-page .footer-top { row-gap: 22px; }
+}
+
+@media (max-width: 380px) {
+  .process-hero { padding: 96px 0 52px; }
+  .process-hero h1 { font-size: clamp(1.75rem, 8.5vw, 2.1rem); }
+  .process-section-heading h2, .future-copy h2, .process-cta h2 { font-size: clamp(1.65rem, 7vw, 1.95rem); }
+  .process-hero-visual { padding-left: 12px; }
+  .eco-center { width: 120px; height: 120px; }
+  .eco-node { min-width: 0; }
+  .eco-node-copy strong, .eco-node-copy span { overflow-wrap: anywhere; }
+  .process-page .footer-col { min-width: 0; overflow-wrap: anywhere; }
 }
